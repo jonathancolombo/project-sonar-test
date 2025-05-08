@@ -4,7 +4,8 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "test": "jest --coverage"
   },
   "dependencies": {
     "@actions/core": "^1.11.1"
@@ -25,6 +26,18 @@
       "ts",
       "tsx",
       "js"
+    ],
+    "collectCoverage": true,
+    "coverageDirectory": "coverage",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "/__tests__/",
+      "\\.test\\.js$",
+      "\\.spec\\.js$"
+    ],
+    "coverageReporters": [
+      "lcov",
+      "text"
     ]
   },
   "private": true
